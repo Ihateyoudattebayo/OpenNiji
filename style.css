@@ -546,11 +546,12 @@ nav {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: centre;
+    justify-content: centre;
     color: #fff;
     margin-top: 20px;
     text-align: center;
-    margin-left: 530px;
+    
 
   }
   
