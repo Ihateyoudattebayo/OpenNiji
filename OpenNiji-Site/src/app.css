@@ -1,0 +1,729 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.indigo {
+    background-color: #3F3B53;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.green {
+    background-color: rgb(156, 174, 116);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-r-2 {
+    animation: slide-r 4s cubic-bezier(.83,0,.17,1);
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@keyframes slide-r {
+    0% {
+        transform: translateX(-100%);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.text {
+    display: inline-block;
+    color: white;
+    font-size: 5rem;
+}
+
+.text-bounce span {
+    display: inline-block;
+    will-change: transform;
+    font-family: "Dosis", sans-serif;
+    animation: text-bounce 2s linear 1;
+}
+
+.text-bounce span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.text-bounce span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.text-bounce span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.text-bounce span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.text-bounce span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.text-bounce span:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.text-bounce span:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.text-bounce span:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* Replace the existing text-bounce keyframes in styles.css with this code */
+
+/* Replace the existing text-bounce keyframes in styles.css with this code */
+
+
+/* Add this to the existing styles.css */
+
+/* Navbar */
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #2d71b3;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  text-transform: uppercase;
+  color: rgb(226, 226, 226);
+  letter-spacing: 5px;
+  font-size: 20px;
+  margin-left: 2em;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin-right: 3em;
+}
+
+
+.nav-links a {
+  color: #66ffa3;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 5px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    margin-right: 0;
+    background-color: #2d71b3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 450ms ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    margin-right: 2.5em;
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 8px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* Add or modify these styles in the existing styles.css */
+
+/* Header */
+.header-images {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Change this value to control the header height */
+    overflow: hidden;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.header-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header-image:first-child {
+    opacity: 1;
+}
+
+.text-box {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.header-text-content {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Add these styles to the existing styles.css */
+
+.header-main-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2; /* Make sure the text stays in front of the header images */
+}
+
+.header-main-text h1 {
+    margin: 0;
+    font-size: 8em;
+    font-weight: 600;
+    background-image: linear-gradient(-108deg,#53d6ff,#666be1,#e45372,#f07c63) !important;
+  background-size: 400% !important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: Gradient 10s ease infinite !important;
+  -moz-animation: Gradient 10s ease infinite !important;
+  animation: Gradient 5s cubic-bezier(.55,.06,.05,.44) infinite !important;
+}
+
+@keyframes Gradient{
+  0%{
+      background-position: 0%;
+  }
+  50%{
+      background-position: 100%;
+  }
+  100%{
+      background-position: 0%;
+  }
+  }
+
+
+.header-main-text h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Replace the existing @keyframes text-bounce code in styles.css with this code */
+
+@keyframes text-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    8.33% {
+      transform: translateY(-70.71%);
+    }
+    16.67% {
+      transform: translateY(-100%);
+    }
+    25% {
+      transform: translateY(-70.71%);
+    }
+    33.33% {
+      transform: translateY(0);
+    }
+    41.67% {
+      transform: translateY(-47.14%);
+    }
+    50% {
+      transform: translateY(-66.67%);
+    }
+    58.33% {
+      transform: translateY(-47.14%);
+    }
+    66.67% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(-23.57%);
+    }
+    83.33% {
+      transform: translateY(-33.33%);
+    }
+    91.67% {
+      transform: translateY(-23.57%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+
+
+/* Add this to the existing styles.css */
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+
+/* Add these styles to the existing styles.css */
+
+/* Header */
+.header {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+  }
+  
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+  
+/* Add these styles to the existing styles.css */
+
+.image-text-section {
+    padding: 2rem 0;
+  }
+  
+  .image-text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .image-container,
+  .text-container {
+    flex: 0 0 48%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3F3B53;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #2e2a43;
+  }
+  
+ /* Add these styles to the existing styles.css */
+/* Modify these styles in the existing styles.css */
+
+.header {
+    position: relative;
+  }
+  
+/* Modify these styles in the existing styles.css */
+
+.content-wrapper {
+    position: relative;
+    background-color: #ffffff;
+    min-height: 100vh; /* Add a min-height property */
+  }
+
+  .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .section-title{
+    position: relative;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 60px;
+  }
+  
+  .section-title:before{
+    content: '';
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    width: 140px;
+    height: 4px;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+  }
+  
+  .section-title:after{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3a6cf4;
+    transform: translateX(-50%);
+  }
+  
+  .about .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .about .content .col-left{
+    position: relative;
+    width: 45%;
+  }
+  
+  .about .content .col-right{
+    position: relative;
+    width: 50%;
+  }
+  
+  .about .content .col-left .img-card{
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+  }
+  
+  .about .content .col-left .img-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .about .content .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .about .content .col-right .paragraph-text{
+    font-size: 1em;
+  }
+
+  .btn{
+    color: #fff;
+    background: #3a6cf4;
+    font-size: 1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    margin-top: 30px;
+    transition: 0.5s ease;
+  }
+  
+  .btn:hover{
+    background: #235bf6;
+  }
+
+  .skills{
+    background: #000016;
+    height:50vh;
+  }
+  
+  .skills .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 530px;
+
+  }
+  
+  .skills .content .col-left{
+    position: relative;
+    width: 46%;
+  }
+  
+  .skills .content .col-left .content-title{
+    margin-bottom: 20px;
+  }
+  
+  .skills .content .col-right{
+    position: relative;
+    width: 46%;
+  }
+  
+  .skills .content .col-right .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .skills .content .col-right .bar .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+
+  
+
+  .services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .title p{
+    font-size: 1em;
+    width: 80%;
+  }
+  
+
+  .services .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .title p{
+    font-size: 1em;
+    width: 80%;
+  }
+  
+  
+ 
+  
+  .contact .content .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  
+  .contact .content .row .card .contact-icon{
+    color: #3a6cf4;
+    font-size: 4em;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .contact .content .row .card:hover .contact-icon{
+    transform: translateY(-10px);
+  }
+  
+  .contact .content .row .card .info{
+    text-align: center;
+  }
+  
+  .contact .content .row .card .info h3{
+    color: #111;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+  }
+  
+  .contact .content .row .card .info span{
+    color: #666;
+    font-weight: 500;
+  }
+  
+  .contact-form{
+    background: #fff;
+    max-width: 600px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
+  }
+  
+  .contact-form h3{
+    color: #111;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form .input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .input-box input,
+  .contact-form .input-box textarea{
+    color: #111;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #111;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .contact-form .input-box .send-btn{
+    color: #fff;
+    background: #3a6cf4;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+  }
+  
+  .contact-form .input-box .send-btn:hover{
+    background: #235bf6;
+  }
+  
+  .footer{
+    background: #000016;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .footer p{
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .footer p a{
+    color: #3a6cf4;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
